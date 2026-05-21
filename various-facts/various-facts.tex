@@ -1,0 +1,92 @@
+\documentclass[dvipdfmx, report]{jsbook}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{1}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+\usepackage{mathtools, ulem}
+
+
+
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+ setpagesize=false,
+ bookmarksnumbered=true,%
+ bookmarksopen=true,%
+ colorlinks=true,%
+ linkcolor=blue,
+ citecolor=red,
+}
+
+\theoremstyle{definition}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\usepackage[utf8]{inputenc}
+
+
+\renewcommand{\emph}{\textbf}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=(\roman*)}
+
+\input{macro.tex}
+
+
+\title{さまざまの事実に関する備忘録}
+\author{馬杉和貴}
+\date{}
+\begin{document}
+\maketitle
+\input{notations-conventions.tex}
+
+% \chapter{副有限群論}
+
+% \chapter{体論}
+
+% \chapter{基本群に関する基礎的な事実}
+
+\chapter{遠アーベル幾何学における群論的性質}
+\input{group-theoreticity.tex}
+
+% \chapter{数論}
+
+% \chapter{GAGA の回避}
+
+% \chapter{スキーム論}
+
+% \chapter{組合せ論的遠アーベル幾何}
+
+% \chapter{Grothendieck Conjecture}
+
+\input{reference.tex}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

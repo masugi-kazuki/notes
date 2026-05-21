@@ -1,0 +1,75 @@
+\section{諸群論的性質の定義}\label{group-theoretic-properties}
+
+基本的な定義に関する辞書である。
+
+\begin{defn}\label{0001}
+  $G$ を副有限群とする。$\Class$ を有限群のクラスとする。$\Sigma \subset \Primes$ とする。
+  \begin{enumerate}
+    \item $G$ が center-free であるとは、$Z(G) = \{1\}$ であることをいう。
+    \item $G$ が slim であるとは、任意の open subgroup $H \subset G$ に対して、$Z_G(H) = \{1\}$ であることをいう。
+    \item $G$ が topologically finitely generated であるとは、$G$ が位相的有限生成であることをいう。
+    \item $G$ が elastic であるとは、その topologically finitely generated な normal closed subgroup がすべて open あるいは自明であることをいう。
+    \item $G$ が very elastic であるとは、$G$ が elastic であって、かつ $G$ が topologically finitely generated でないことをいう。
+    \item $G$ が indecomposable であるとは、$G$ が非自明な積に分解できないことをいう。
+    \item $G$ が strongly indecomposable であるとは、任意の open subgroup $H \subset G$ に対して、$H$ が indecomposable であることをいう。
+    \item $G$ が finite であるとは、$G$ が有限群であることをいう。
+    \item $G$ が infinite であるとは、$G$ が finite でないことをいう。
+    \item $G$ が pro-$p$ であるとは、$G$ が $p$-群の inverse limit であることをいう。
+    \item $G$ が almost pro-$p$ であるとは、$G$ が pro-$p$ な open subgroup をもつことをいう。
+    \item $G$ が pro-$\Class$ であるとは、$G$ が $\Class$ に属する群の inverse limit であることをいう。
+    \item $G$ が almost pro-$\Class$ であるとは、$G$ が pro-$\Class$ な open subgroup をもつことをいう。
+    \item $G$ が自由副有限群 (free profinite group) であるとは、$G$ がある集合に対して副有限群として自由生成されていることをいう。副有限群であることが明らかな文脈では、単に自由群とよぶことがある。
+    \item $G$ が free pro-$p$ group であるとは、$G$ がある集合に対して pro-$p$ group として自由生成されていることをいう。
+    \item $G$ が free pro-$\Class$ group であるとは、$G$ がある集合に対して pro-$\Class$ group として自由生成されていることをいう。
+    \item $G$ が cyclic であるとは、$G$ が $1$ 元生成されていることをいう。
+    \item $G$ が profinite surface group であるとは、$G$ がある有限型 Riemann 面の基本群の副有限完備化と同型であることをいう。副有限群であることが明らかな文脈では、単に surface group とよぶことがある。
+    \item $G$ が pro-$\ell$ surface group であるとは、$G$ がある有限型 Riemann 面の基本群の pro-$\ell$ 完備化と同型であることをいう。
+    \item $G$ が GFGPC (geometric fundamental group of positive-characteristic curve) であるとは、$G$ がある正標数代数閉体上の代数曲線の基本群と同型であることをいう。
+    \item $G$ が pro-$p$ GFGPC であるとは、$G$ がある標数 $p$ の代数閉体上の代数曲線の基本群の pro-$p$ 完備化と同型であることをいう。
+    \item $G$ が NF-type であるとは、$G$ がある数体の絶対 Galois 群と同型であることをいう。(pro-$\Sigma$ NF-type などについても同様の用語法をおこなう。)
+    \item $G$ が MLF-type であるとは、$G$ がある MLF の絶対 Galois 群と同型であることをいう。(pro-$\Sigma$ MLF-type, MLF$_p$-type, pro-$\Sigma$ MLF$_p$-type などについても同様の用語法をおこなう。)
+    \item $G$ が PGF-type であるとは、$G$ がある PGF の絶対 Galois 群と同型であることをいう。(pro-$\Sigma$ PGF-type などについても同様の用語法をおこなう。)
+    \item $G$ が PLF-type であるとは、$G$ がある PLF の絶対 Galois 群と同型であることをいう。(pro-$\Sigma$ PLF-type などについても同様の用語法をおこなう。)
+    \item その他の体のクラスについても、同様の用語法をおこなう。
+  \end{enumerate}
+\end{defn}
+
+以下の定義は、\cite{AnabGroupProp} によるものである。
+
+\begin{defn}\label{0003}
+  $G$ を位相群とする。$n$ を自然数とする。
+  \begin{enumerate}
+    \item $H \subset G$ を部分群とする。$n \in \Nzero$ とする。このとき、$H$ が $G$ において $n$-subnormal であるとは、$H_0 = G$, $H_n = H$ であるような部分群の列 $H_0 \supset H_1 \supset \cdots \supset H_n$ が存在して、任意の $i = 1, \ldots, n$ について、$H_i$ が $H_{i - 1}$ において normal であるようにできることをいう。$H$ が $G$ において subnormal であるとは、ある $n \in \Nzero$ について、$H$ が $G$ において $n$-subnormal であることをいう。
+    \item $H \subset G$ を部分群とする。$H$ が $G$ において normally decomposable であるとは、$H$ が $G$ の非自明な正規部分群 $H_1$, $H_2$ によって $H = H_1 \times H_2$ と分解できることをいう。$H$ が $G$ において normally indecomposable であるとは、$H$ が $G$ において normally decomposable でないことをいう。
+    \item $G$ が internally indecomposable であるとは、任意の $G$ の非自明な正規部分群が center-free であり、かつ normally indecomposable であることをいう。$G$ が副有限群であるとき、$G$ が strongly internally indecomposable であるとは、任意の open subgroup $H \subset G$ に対して、$H$ が internally indecomposable であることをいう。
+    \item $G$ が $n$-sn-internally indecomposable であるとは、任意の $G$ の $(n - 1)$-subnormal な部分群が internally indecomposable であることをいう。
+    \item $G$ が副有限群であるとき、$G$ が strongly $n$-sn-internally indecomposable であるとは、任意の open subgroup $H \subset G$ に対して、$H$ が $n$-sn-internally indecomposable であることをいう。
+    \item $G$ が sn-internally indecomposable であるとは、ある $n \in \N$ について、$G$ が $n$-sn-internally indecomposable であることをいう。
+    \item $G$ が副有限群であるとき、$G$ が strongly sn-internally indecomposable であるとは、任意の open subgroup $H \subset G$ に対して、$H$ が sn-internally indecomposable であることをいう。
+    \item $G$ が副有限群であるとき、$G$ が $n$-sn-quasielastic であるとは、任意の $G$ の topologically finitely generated な $n$-subnormal closed subgroup が自明あるいは open であることをいう。
+    \item $G$ が副有限群であるとき、$G$ が $n$-sn-elastic であるとは、任意の $G$ の開部分群の topologically finitely generated な $n$-subnormal closed subgroup が自明あるいは open であることをいう。
+    \item $G$ が quasi-elastic であるとは、$G$ が $1$-sn-quasielastic であることをいう。
+    \item $G$ が sn-quasielastic であるとは、ある $n \in \N$ について、$G$ が $n$-sn-quasielastic であることをいう。
+    \item $G$ が sn-elastic であるとは、ある $n \in \N$ について、$G$ が $n$-sn-elastic であることをいう。
+    \item $G$ が very quasielastic (resp., very $n$-sn-quasielastic, very $n$-sn-elastic, very sn-quasielastic, very sn-elastic) であるとは、$G$ が quasi-elastic (resp., $n$-sn-quasielastic, $n$-sn-elastic, sn-quasielastic, sn-elastic) であって、かつ $G$ が topologically finitely generated でないことをいう。
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}\label{0004}
+  副有限群 $G$ について、全射 $G \to Q$ が almost pro-$\Class$ maximal quotient であるとは、ある $G$ の normal open subgroup $H$ が存在して、$G \to Q$ の kernel が $H \to H^p$ の kernel と一致することをいう。
+\end{defn}
+
+\section{諸群論的性質についての純群論的事実}
+
+\begin{lem}\label{0002}
+  $G$ を副有限群とする。このとき、$G$ が topologically finitely generated かつ elastic であるならば、$G$ は indecomposable であるか、あるいは有限群である。
+\end{lem}
+\begin{proof}
+  $G = G_1 \times G_2$ として非自明な分解があるとする。このとき、$G_1$, $G_2$ はいずれも topologically finitely generated な normal closed subgroup であるため、指数有限である。したがって、$G$ は有限群である。
+\end{proof}
+
+\begin{lem}[internal indecomposability についての簡単な基準]\label{0005}
+  $G$ を副有限群とする。このとき、$G$ が internally indecomposable であることと、任意の nontrivial normal closed subgroup $H$ について $Z_G(H) = \{1\}$ であることは同値である。
+\end{lem}
+
+
