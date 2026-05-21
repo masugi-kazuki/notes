@@ -1,0 +1,56 @@
+\section{$\ell$-cyclotomically full fields}
+\begin{defn}\label{000K}
+  体 $K$ を標数 $p$ ($0$ であることを許す記号法をおこなう) とする。このとき、$K$ が $\ell$-cyclotomically full であるとは、$K$ の $\ell$-adic 円分指標 $\chi_\ell \colon G_K \to \Z_\ell^\times$ が open image をもつことをいう。
+\end{defn}
+
+\section{Kummer faithful fields}
+\begin{defn}\label{000J}
+  $K$ を標数 $0$ の体とする。このとき、$K$ が Kummer faithful であるとは、$K$ の任意の有限次拡大 $L$ とすべての semi-abelian variety $A$ について、以下が成り立つことをいう。
+  \begin{itemize}
+    \item $\bigcup_{n \geq 1}n \cdot A(L) = 0$ である。
+  \end{itemize}
+  また、$K$ が torally Kummer faithful であるとは、$K$ の任意の有限次拡大 $L$ とすべての torus $T$ について、以下が成り立つことをいう。
+  \begin{itemize}
+    \item $\bigcup_{n \geq 1}n \cdot T(L) = 0$ である。
+  \end{itemize}
+\end{defn}
+
+\begin{lem}\label{000L}
+  $K$ を標数 $0$ の体とする。$A$ を $K$ 上の semi-abelian variety とする。このとき、以下の条件は同値である。
+  \begin{itemize}
+    \item $\bigcup_{n \geq 1}n \cdot A(K) = 0$ である。
+    \item 付随する Kummer map $A(K) \to \H^1(G_K, T(A))$ が injective である: ここで、$T(A) := \varprojlim_{n \geq 1}A[n] = \Hom(\Q/\Z, A(\overline{K}))$ は $A$ の Tate module である。
+  \end{itemize}
+\end{lem}
+\begin{proof}
+  完全列 $1 \to A[n] \to A \xrightarrow{n} A \to 1$ について、その Galois cohomology をとれば、\[1 \to N \cdot A(K) \to A(K) \to \H^1(G_K, A[n])\] なる完全列を得る。この極限をとれば、補題の同値は明らかである。
+\end{proof}
+
+\begin{lem}\label{000M}
+  $K$ を標数 $0$ の体とする。このとき、以下は同値である。
+  \begin{itemize}
+    \item $K$ は torally Kummer faithful である。
+    \item $K$ の任意の有限次拡大 $L$ について、$\bigcup_{n \geq 1} \left( L^\times \right)^n = 1$ である。
+  \end{itemize}
+\end{lem}
+\begin{proof}
+  定義 (とトーラスに関する一般論) より明らか。
+\end{proof}
+
+\begin{lem}\label{000N}
+  $K$ が torally Kummer faithful であるならば、$K$ は任意の素数 $\ell$ について $\ell$-cyclotomically full である。
+\end{lem}
+\begin{proof}
+  Lemma \ref{000M} より、特に任意の有限次拡大 $L$ について、$\mu_{\ell^\infty} \subsetneq L$ となることがわかる。これはすなわち、$K$ の $\ell$-adic 円分指標 $\chi_\ell \colon G_K \to \Z_\ell^\times$ が infinite image (open image) をもつことを意味する。
+\end{proof}
+
+以下は \cite[\S 1]{AbsTopIII} のからの内容である。
+
+
+\section{stably ($p$-)$\times\mu$-indivisible fields, stably $\mu_{p^\infty}$-finite ($\mu$-finite) fields}
+
+\section{(generalized) sub $p$-adic fields}
+
+\section{higher local fields}
+
+\section{Hilbertian fields}

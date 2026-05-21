@@ -85,7 +85,20 @@
 \begin{proof}
   $N$ の有限性より、補題は形式的である。
 \end{proof}
-\noindent\hrulefill
+
+\begin{lem}\label{000H}
+  $G$ を副有限群とする。このとき、$G$ が topologically finitely generated であれば、その開部分群もまた topologically finitely generated である。
+\end{lem}
+\begin{proof}
+  自由群に関する議論に帰着される。
+\end{proof}
+
+\begin{lem}\label{000I}
+  $G$ を副有限群とする。このとき、$G$ が very elastic であることと、$G$ が nontrivial な topologically finitely generated normal closed subgroup をもたないことは同値である。
+\end{lem}
+\begin{proof}
+  Lemma \ref{000H} をもちいれば、簡単である。
+\end{proof}
 
 以下の内容は、\cite{IntIndecomp} によるものである。
 
@@ -107,6 +120,15 @@
   これは補題の証明である。
 \end{proof}
 
+\begin{rem}\label{000F}
+  以下の類似を確認したい:
+  \begin{itemize}
+    \item $G$ が slim であるとは、任意の open subgroup $H$ に対して、$Z_G(H) = \{1\}$ であることをいう。
+    \item $G$ が internally indecomposable であるとは、任意の nontrivial normal closed subgroup $H$ に対して、$Z_G(H) = 1$ であることをいう。
+  \end{itemize}
+  この意味で、``internally indecomposable'' とは、ある種の正当な ``slim'' の強化であるといえる。
+\end{rem}
+
 \begin{lem}[internal indecomposability について、開部分群からの ascend]\label{0008}
   $G$ を副有限群とする。$G$ を internally infinite であると仮定する。このとき、$G$ の開部分群 $H$ が internally indecomposable であるならば、$G$ もまた internally indecomposable である。同様に、$H$ が strongly internally indecomposable であるならば、$G$ もまた strongly internally indecomposable である。
 \end{lem}
@@ -117,7 +139,7 @@
   internally indecomposable の場合は、(Lemma \ref{0009} をもちいて、)Lemma \ref{0005} からただちに従うことが確認できる。(すなわち、$N$ を $G$ の nontrivial な normal closed subgroup とする。このとき、$N \cap H \neq 1$ であるため、$Z_H(N \cap H) = 1$ である。したがって、$Z_G(N) = 1$ が導かれる。)
 \end{proof}
 
-\begin{lem}\label{000A}
+\begin{lem}[internal indecomposability について、surjective system に関する極限への ascend]\label{000A}
   $G$ を副有限群とする。$\{N_i\}_{i \in I}$ を $G$ の normal closed subgroup による separated な directed system とする (順序は狭方を大とする)。このとき、$G/N_i$ ($i \in I$) がすべて internally indecomposable であるならば、$G$ もまた internally indecomposable である。また、$G/N_i$ ($i \in I$) がすべて strongly internally indecomposable であるならば、$G$ もまた strongly internally indecomposable である。
 \end{lem}
 \begin{proof}
@@ -127,7 +149,7 @@
   internally indecomposable の場合について: $N$ を $G$ の nontrivial な normal closed subgroup とする。$C$ を $N$ の centralizer とする。このとき、$N$ も $C$ も像が活きている添字にうつれば、その添字で矛盾が生じる。したがって、等式 $C = 1$ がみちびかれる。
 \end{proof}
 
-\begin{lem}\label{000B}
+\begin{lem}[自己同型に関するトリック]\label{000B}
   $G$ を副有限群とする。$G$ が internally indecomposable であるとする。$H$ を $G$ の nontrivial な normal closed subgroup とする。このとき、$\alpha \in \Aut(G)$ であって、$\alpha|_H = \id_H$ であるものは、恒等射
   に限られる。
 \end{lem}
@@ -135,39 +157,86 @@
   $\alpha(g) \cdot g^{-1}$ を $\beta(g)$ とおいたとき、$\beta(g) \in Z_G(H)$ となることが確認できる。したがって、$\beta(g) = 1$ であるため、$\alpha(g) = g$ である。
 \end{proof}
 
-\begin{lem}\label{000C}
+\begin{lem}[自己同型に関するトリック - variant 1]\label{000C}
   $G$ を副有限群とする。$H$ を $G$ の normal subgroup とする。$\alpha \in \Aut(G)$ について、これが $\alpha|_H = \id_H$ を充たすとする。このとき、$g \in G$ について、$\alpha(g) \cdot g^{-1} \in Z_G(H)$ である。
 \end{lem}
 \begin{proof}
   Lemma \ref{000B} とおなじ議論である。
 \end{proof}
 
-\begin{lem}\label{000D}
+\begin{lem}[自己同型に関するトリック - variant 2]\label{000D}
   $G$ を slim な副有限群とする。このとき、$\alpha \in \Aut(G)$ であって、開部分群 $U$ 上で identity であるものは identity に限られる。同様に、$U$ 上で inner automorphism であるものは、($U$ の元による) inner automorphism に限られる。
 \end{lem}
 \begin{proof}
   Lemma \ref{000C} の直接の帰結である。
 \end{proof}
 
-\begin{lem}\label{000E}
+\begin{lem}[internal indecomposability について、extension への ascend]\label{000E}
   以下に、副有限群の可換図式をとる。
   \begin{center}
     \begin{tikzpicture}
-      \node (A) at (0, 0) {$G$};
-      \node (B) at (2, 0) {$\Aut(G)$};
-      \draw[->] (A) to node[above] {} (B);
+      \node (A1) at (0, 0) {$1$};
+      \node (B1) at (2, 0) {$\Delta_1$};
+      \node (C1) at (4, 0) {$\Pi_1$};
+      \node (D1) at (6, 0) {$G_1$};
+      \node (E1) at (8, 0) {$1$};
+      \node (A2) at (0, -1.2) {$1$};
+      \node (B2) at (2, -1.2) {$\Delta_2$};
+      \node (C2) at (4, -1.2) {$\Pi_2$};
+      \node (D2) at (6, -1.2) {$G_2$};
+      \node (E2) at (8, -1.2) {$1$};
+      \draw[->] (A1) to node[above] {} (B1);
+      \draw[->] (B1) to node[above] {} (C1);
+      \draw[->] (C1) to node[above] {} (D1);
+      \draw[->] (D1) to node[above] {} (E1);
+      \draw[->] (A2) to node[above] {} (B2);
+      \draw[->] (B2) to node[above] {} (C2);
+      \draw[->] (C2) to node[above] {} (D2);
+      \draw[->] (D2) to node[above] {} (E2);
+      \draw[->] (B1) to node[right] {} (B2);
+      \draw[->] (C1) to node[right] {} (C2);
+      \draw[->] (D1) to node[right] {} (D2);
     \end{tikzpicture}
   \end{center}
 \end{lem}
+ここで、垂直の射がすべて open injection であったとする。またそれぞれの行によってつくられる外表現を $\rho_1: G_1 \to \Out(\Delta_1)$, $\rho_2: G_2 \to \Out(\Delta_2)$ とする。このとき、$\Ker{\rho_1} \subset \Ker{\rho_2}$ である。とくに、$\rho_2$ が単射ならば、$\rho_1$ もまた単射である。
 \begin{proof}
-  
+  Lemma \ref{000D} をもちいれば、簡単である。
 \end{proof}
 
-\section{体の絶対 Galois 群に対する群論的性質}
+\begin{prop}\label{000G}
+  \[
+    1 \to \Delta \to \Pi \to G \to 1
+  \]
+  を副有限群の完全列とする。また、この完全列に付随する外表現を $\rho: G \to \Out(\Delta)$ とする。このとき、以下が成立する。
+  \begin{enumerate}
+  \item $\Delta$, $G$ いずれも internally indecomposable であり、かつ $\rho$ が単射であるならば、$\Pi$ もまた internally indecomposable である。同様のことが strongly internally indecomposable についても成り立つ。
+  \item $\Delta$ が internally indecomposable であって、$G$ が abelian であるとする。このとき、$\rho$ の単射か、あるいは $\Pi$ の center-free があれば、$\Pi$ は internally indecomposable である。同様のことが strongly internally indecomposable についても ($\rho$ の単射あるいは $\Pi$ の slimness により) 従う。
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  open subgroup に下がっても (f\'{e}t に上がっても)、外表現の単射が成り立つというのが Lemma \ref{000E} である。このことをみれば、strongly ... 側は形式的である。
+  \begin{enumerate}
+    \item $N$ と $C$ が $\Pi$ の normal closed subgroup であって、これらが可換すると仮定する。すれば、$\rho$ の単射と Lemma \ref{000B} の trick により、いずれかが $\Delta$ において非自明に交わり、もう一方が $G$ において活きているという状況を封じる。しかし、それぞれの internal indecomposability は $\Delta$ においてともに活きること、$G$ においてともに活きることを封じる。これはいずれかの自明性をみちびく。
+    \item $\rho$ が単射なら、$\Pi$ が center-free であることは簡単にわかる。ここで、$H$ が非自明な $\Pi$ の normal closed subgroup であれば $H \cap \Delta \neq 1$ であることを確認する: $1 \neq h \in H$ について、$[g, h] \neq 1$ なる $g \in \Pi$ が存在する (center-free 性より)。$[g, h] \in H \cap \Delta$ であるので、これは claim をみちびく。このことを $N$ と $C$ の議論に適用すれば $\Delta$ の internal indecomposability から状況は従う。
+  \end{enumerate}
+  これは命題の証明である。
+\end{proof}
 
-\section{曲線の絶対 Galois 群に対する群論的性質}
+\section{体の絶対 Galois 群に対する slimness}
+
+\section{体の絶対 Galois 群に対する elasticity}
+
+\section{体の絶対 Galois 群に対する indecomposability}
+
+\section{曲線の基本群に対する slimness}
+
+\section{曲線の基本群に対する elasticity}
+
+\section{曲線の基本群に対する indecomposability}
 
 \section{$\Out(F)$, $F$: 自由群 of rank $ \geq 2$, に対する strongly indecomposability}
 
 以下は、
 
+\section{$\GT_\ell$ に対するindecomposability}
